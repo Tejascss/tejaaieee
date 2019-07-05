@@ -1,0 +1,7 @@
+{
+  "name": "AIEE",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

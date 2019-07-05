@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="4" by="lint 3.0.1">
+
+    <issue
+        id="NetworkSecurityConfig"
+        severity="Fatal"
+        message="Missing `includeSubdomains` attribute"
+        category="Correctness"
+        priority="5"
+        summary="Valid Network Security Config File"
+        explanation="Ensures that a `&lt;network-security-config>` file, which is pointed to by an `android:networkSecurityConfig` attribute in the manifest file, is valid"
+        url="https://developer.android.com/preview/features/security-config.html"
+        urls="https://developer.android.com/preview/features/security-config.html"
+        errorLine1="        &lt;domain>localhost&lt;/domain>"
+        errorLine2="         ~~~~~~">
+        <location
+            file="F:\ionic-projects\AIEE\platforms\android\app\src\main\res\xml\network_security_config.xml"
+            line="4"
+            column="10"/>
+    </issue>
+
+</issues>

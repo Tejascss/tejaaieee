@@ -1,0 +1,54 @@
+<!--
+  ion-header is to display header part of the screen Which has a title 
+  and pages loaded.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+        <ion-grid>
+            <ion-row>
+              <ion-col>
+                AIEE User list,
+              </ion-col>
+              <ion-col>
+                Pages loaded : {{page_no}}
+              </ion-col>
+            </ion-row>
+        </ion-grid>  
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<!--
+  List is displayed with pagination 5 records loaded in each page 
+  once we scroll down to the end of the page next set of 5 records 
+  will be added to list and this continuous further. 
+-->
+
+<ion-content>
+    <ion-list>
+      <ion-item *ngFor="let user of usersList">
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                  <ion-title><span>{{user.name.title}}.</span><span>{{user.name.first}}</span> &nbsp;<span>{{user.name.last}} </span></ion-title>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                  User Since :  {{dateFormat(user.registered.date)}}
+                </ion-col>
+                <ion-col>
+                  Suscription age: {{user.registered.age}}
+                </ion-col>
+            </ion-row>
+            </ion-grid>
+             <p style="padding-left:10px;">Location: {{user.location.street}},{{user.location.city}} </p>
+            </ion-item>
+    </ion-list>
+   
+    <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+      <ion-infinite-scroll-content></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+   
+   </ion-content>

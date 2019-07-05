@@ -1,0 +1,4 @@
+#Fri Jul 05 22:40:31 IST 2019
+base.0=F\:\\ionic-projects\\AIEE\\platforms\\android\\app\\build\\intermediates\\transforms\\dex\\release\\0
+path.0=classes.dex
+renamed.0=classes.dex
